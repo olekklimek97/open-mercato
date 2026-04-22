@@ -133,4 +133,4 @@ USER omuser
 EXPOSE ${CONTAINER_PORT}
 
 WORKDIR /app/apps/mercato
-CMD ["yarn", "start"]
+CMD ["sh", "-c", "yarn db:migrate && yarn start"]
